@@ -51,7 +51,6 @@ label.disabled, #signed-date {
 #likert {
     display: table;
     margin: 0 auto;
-    min-width: 630px;
 }
 #likert table{
     max-width: 700px;

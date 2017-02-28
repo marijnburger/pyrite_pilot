@@ -8,6 +8,8 @@
         articleimg.setAttribute("src", "data/loading.gif");
         articleimg.setAttribute("class", "loading");
 
+        var progress = document.getElementById('progress');
+
         var radios = document.querySelectorAll('input[type="radio"]');
         radios.forEach(function (item) {
             item.onchange = enablecontinue;
@@ -17,6 +19,7 @@
         continuebutton.onclick = processresponse;
 
         // onload script =======================================================
+        switchToLoadingGif()
         var responderID = btoa(new Date().toString());
         var articlepaths = ["data/article0.png", "data/article1.png", "data/article2.png",
                             "data/article3.png", "data/article4.png", "data/article5.png",
@@ -27,7 +30,6 @@
         var endtime;
         var duration;
         switchToImg(articlepaths[counter]);
-
 
         // function definitions ================================================
         function switchToLoadingGif() {
@@ -67,11 +69,14 @@
             request.send(vars);
             if (counter == articlepaths.length - 1) {
                 counter--;
+                document.element.getElementsByTagName("body").innerHTML = "";
                 window.location.href = "reaction.php";
             } else {
                 counter++;
                 switchToImg(articlepaths[counter]);
-                window.scrollTo(0,0);
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                progress.setAttribute("aria-valuenow", counter * 10);
+                progress.setAttribute("style", "width:" + (counter * 10) + "%");
                 starttime = new Date();
             }
         }
