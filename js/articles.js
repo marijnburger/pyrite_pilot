@@ -69,14 +69,13 @@
             request.send(vars);
             if (counter == articlepaths.length - 1) {
                 counter--;
-                document.element.getElementsByTagName("body").innerHTML = "";
                 window.location.href = "reaction.php";
             } else {
                 counter++;
                 switchToImg(articlepaths[counter]);
                 $("html, body").animate({ scrollTop: 0 }, "slow");
-                progress.setAttribute("aria-valuenow", counter * 10);
-                progress.setAttribute("style", "width:" + (counter * 10) + "%");
+                progress.setAttribute("aria-valuenow", (counter + 1) * 10);
+                progress.setAttribute("style", "width:" + ((counter + 1) * 10) + "%");
                 starttime = new Date();
             }
         }
