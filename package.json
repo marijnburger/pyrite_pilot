@@ -1,0 +1,19 @@
+{
+  "name": "pyrite_pilot",
+  "version": "1.0.0",
+  "description": "pilot test for pyrite test engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marijnburger/pyrite_pilot.git"
+  },
+  "author": "marijnburger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marijnburger/pyrite_pilot/issues"
+  },
+  "homepage": "https://github.com/marijnburger/pyrite_pilot#readme"
+}

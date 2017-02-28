@@ -1,0 +1,46 @@
+/*
+CSS for Pyrite Pilot
+*/
+
+/* all */
+body {
+    padding-top: 20px;
+}
+
+/* index */
+#sign-form #consent {
+    max-height: 30%;
+    overflow-y: scroll;
+}
+label.disabled, #signed-date {
+    font-style: italic;
+    color: Grey;
+}
+
+/* index & print */
+#consent ul {
+    list-style-type: none;
+}
+
+/* print */
+#print-form table {
+    width: 100%;
+}
+
+/* articles */
+#likert table{
+    max-width: 700px;
+    background-color: #eee;
+    border: 20px solid #eee;
+    border-radius: 6px;
+    border-collapse: separate;
+}
+#likert td {
+    width: 14.28%;
+}
+#likert #labels td {
+    padding: 0 4px;
+}
+#likert #radios td {
+    padding: 8px 0;
+}
