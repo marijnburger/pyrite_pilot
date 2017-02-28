@@ -5,11 +5,11 @@
             '<div class="panel-heading">
                 <table>
                     <tr>
-                        <td>Please print or save this form for your records</td>
-                        <td class="">
+                        <td id="print-title">Please print or save this form for your records</td>
+                        <td>
                             <div id="continuebutton" class="text-right">
                                 <a href="articles.php">
-                                    <button type="submit" class="btn btn-default">Continue</button>
+                                    <button type="submit" class="btn btn-default small">Continue</button>
                                 </a>
                             </div>
                         </td>

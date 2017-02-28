@@ -9,7 +9,7 @@ body {
 
 /* index */
 #sign-form #consent {
-    max-height: 30%;
+    max-height: 40%;
     overflow-y: scroll;
 }
 label.disabled, #signed-date {
@@ -23,11 +23,36 @@ label.disabled, #signed-date {
 }
 
 /* print */
+#print-form div.panel-heading {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+}
 #print-form table {
     width: 100%;
 }
+#print-title {
+    font-size: 14px;
+}
 
 /* articles */
+#article {
+    border-radius: 4px;
+}
+.loading {
+    height: 75px;
+    width: 75px;
+}
+.screenshot {
+    height: auto;
+    width: 100%;
+    max-width: 700px;
+}
+#likert {
+    display: table;
+    margin: 0 auto;
+    min-width: 630px;
+}
 #likert table{
     max-width: 700px;
     background-color: #eee;

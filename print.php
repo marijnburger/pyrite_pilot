@@ -11,9 +11,10 @@
 </head>
 <body>
     <?php
+
         //TODO store, submitted form
     ?>
-    <div class="container" id="print-form">
+    <div class="container col-sm-offset-2 col-sm-8" id="print-form">
         <?php
             $signed = true; //compile signed form
             include 'php/consent.php';

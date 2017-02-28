@@ -13,10 +13,7 @@
 <body>
     <div class="container col-sm-offset-2 col-sm-8">
         <div class="jumbotron">
-            <h1>Welcome!</h1>
-            <p>
-                Here is a brief description of our pilot. Here is a brief description of our pilot. Here is a brief description of our pilot.
-            </p>
+            <h1>Pyrite Research Pilot</h1>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
