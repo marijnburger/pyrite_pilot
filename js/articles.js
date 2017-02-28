@@ -62,19 +62,19 @@
             var request = new XMLHttpRequest();
             var vars = "command=response&responderID=" + encodeURIComponent(responderID)
                         + "&responsevalue=" + encodeURIComponent(responsevalue)
-                        + "&duration=" + encodeURIComponent(duration);
+                        + "&duration=" + encodeURIComponent(duration)
                         + "&counter=" + encodeURIComponent(counter);
             request.open("POST", "php/filecontroller.php", true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             request.send(vars);
             if (counter == articlepaths.length - 1) {
                 counter--;
-                window.location.href = "reaction.php";
+                window.location.href = "end.php";
             } else {
                 counter++;
                 switchToImg(articlepaths[counter]);
                 $("html, body").animate({ scrollTop: 0 }, "slow");
-                progress.setAttribute("aria-valuenow", (counter + 1) * 10);
+                progress.setAttribute("aria-valuenow", "" + (counter + 1) * 10);
                 progress.setAttribute("style", "width:" + ((counter + 1) * 10) + "%");
                 starttime = new Date();
             }

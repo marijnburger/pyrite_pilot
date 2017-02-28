@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Articles</title>
+    <title>Review Articles</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
