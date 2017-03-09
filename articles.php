@@ -27,11 +27,20 @@
             header('Location: responses.php');
         }
 
-        $portionOf100 = 100 / NUM_IMAGES;
-        $width = round($portionOf100 + ($portionOf100 * $counter));
+        $portionOf100 = 100 / (NUM_IMAGES * 2);
+        $width = round($portionOf100 * $counter);
 
     ?>
     <div class="container col-sm-offset-2 col-sm-8">
+        <div class="progress text-center">
+            <div id="progress"
+                class="progress-bar progress-bar-info progress-bar-striped"
+                role="progressbar" aria-valuenow="<?php echo $width; ?>"
+                aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $width ?>%">
+                <?php if ($counter != 0) { echo $width . '% completed'; } ?>
+            </div>
+            <?php if ($counter == 0) { echo '0% completed'; } ?>
+        </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 Review article and respond below.
@@ -47,13 +56,6 @@
                 </div>
                 <form action="articles.php" method="post">
                     <div id="likert" class="form-group">
-                        <div class="progress">
-                            <div id="progress"
-                                class="progress-bar progress-bar-info progress-bar-striped <?php if ($counter == NUM_IMAGES - 1) { echo 'active'; }?>"
-                                role="progressbar" aria-valuenow="<?php echo $width; ?>"
-                                aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $width ?>%">
-                            </div>
-                        </div>
                         <h4>This article seems believable.</h4>
                         <div class="table-responsive table">
                             <table class="text-center">

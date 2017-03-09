@@ -12,20 +12,32 @@
     <script src="js/responses.js"></script>
 </head>
 <body>
+    <?php
+    require 'php/app_config.php';
+    session_start();
+
+    $counter = $_SESSION["counter"];
+    $portionOf100 = 100 / (NUM_IMAGES * 2);
+    $width = round($portionOf100 * $counter);
+    ?>
     <div class="container col-sm-offset-2 col-sm-8">
+        <div class="progress">
+            <div id="progress"
+                class="progress-bar progress-bar-info progress-bar-striped"
+                role="progressbar" aria-valuenow="<?php echo $width; ?>"
+                aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $width ?>%">
+                <?php if ($counter != 0) { echo $width . '% completed'; } ?>
+            </div>
+        </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 Review your responses.
             </div>
             <div class="panel-body">
                 <div class="panel-group" id="responses">
-                    <div class="panel panel-default">
+                    <div id="panel-1" class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#responses" href="#collapse1">
-                                    <i class="fa fa-minus-square" aria-hidden="true"></i> Response 1
-                                </a>
-                            </h4>
+                            <h4 class="panel-title">Response 1</h4>
                         </div>
                         <div id="collapse1" class="panel-collapse collapse in">
                             <form class="form-horizontal">
@@ -35,6 +47,7 @@
                                 <label class="control-label col-sm-5" for="select-1">Which kind of element did you react to?</label>
                                 <div class="col-sm-3">
                                     <select id="select-1" class="form-control">
+                                        <option selected="true" disabled="disabled">Select an element...</option>
                                         <option>Font Type</option>
                                         <option>Font Size</option>
                                         <option>Link</option>
@@ -52,15 +65,14 @@
                                 <label for="react-1">Why did you react to this element?</label>
                                 <textarea class="form-control" rows="4" id="react-1"></textarea>
                             </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-default">Next <i class="fa fa-play" aria-hidden="true"></i></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
+                    <div id="panel-2" class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#responses" href="#collapse2">
-                                    <i class="fa fa-plus-square" aria-hidden="true"></i> Response 2
-                                </a>
-                            </h4>
+                            <h4 class="panel-title">Response 2</h4>
                         </div>
                         <div id="collapse2" class="panel-collapse collapse">
                             <form class="form-horizontal">
@@ -70,6 +82,7 @@
                                 <label class="control-label col-sm-5" for="select-2">Which kind of element did you react to?</label>
                                 <div class="col-sm-3">
                                     <select id="select-2" class="form-control">
+                                        <option selected="true" disabled="disabled">Select an element...</option>
                                         <option>Font Type</option>
                                         <option>Font Size</option>
                                         <option>Link</option>
@@ -87,15 +100,14 @@
                                 <label for="react-2">Why did you react to this element?</label>
                                 <textarea class="form-control" rows="4" id="react-2"></textarea>
                             </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-default">Next <i class="fa fa-play" aria-hidden="true"></i></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
+                    <div id="panel-3" class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#responses" href="#collapse3">
-                                    <i class="fa fa-plus-square" aria-hidden="true"></i> Response 3
-                                </a>
-                            </h4>
+                            <h4 class="panel-title">Response 3</h4>
                         </div>
                         <div id="collapse3" class="panel-collapse collapse">
                             <form class="form-horizontal">
@@ -105,6 +117,7 @@
                                 <label class="control-label col-sm-5" for="select-3">Which kind of element did you react to?</label>
                                 <div class="col-sm-3">
                                     <select id="select-3" class="form-control">
+                                        <option selected="true" disabled="disabled">Select an element...</option>
                                         <option>Font Type</option>
                                         <option>Font Size</option>
                                         <option>Link</option>
@@ -122,12 +135,12 @@
                                 <label for="react-3">Why did you react to this element?</label>
                                 <textarea class="form-control" rows="4" id="react-3"></textarea>
                             </div>
+                            <form action="end.php" method="post" class="text-right">
+                                <button id="last-next" type="submit" class="btn btn-default">Next <i class="fa fa-play" aria-hidden="true"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <form action="end.php" method="post" class="text-center col-sm-12">
-                    <button type="submit" class="btn btn-default">Continue <i class="fa fa-play" aria-hidden="true"></i></button>
-                </form>
             </div>
         </div>
     </div>

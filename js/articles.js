@@ -57,7 +57,7 @@
             responseYwell = e.pageY - wellPosition.Y;
             responseXimage = e.pageX - articlePosition.X;
             responseYimage = e.pageY - articlePosition.Y;
-            response.style.top = responseYwell + 11 + "px";
+            response.style.top = responseYwell + 50 + "px";
             response.style.left = responseXwell + 10 + "px";
 
             //make response visible
