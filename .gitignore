@@ -1,2 +1,7 @@
-
+.gitignore
 todo.txt
+data/article*.png
+data/response*.png
+data/responses.txt
+pyrite_pilot_keypair.pem
+db_config.php

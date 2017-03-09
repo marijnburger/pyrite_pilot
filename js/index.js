@@ -3,7 +3,9 @@
 
     window.onload = function () {
         var consentcheck = document.getElementById("consent-check");
-        consentcheck.onclick = enablesubmit;
+        if (consentcheck != null) { //handles pilot/demo scenarios where no consent form is provided
+            consentcheck.onclick = enablesubmit;
+        }
         var submitconsent = document.getElementById("submit-consent");
 
         function enablesubmit() {

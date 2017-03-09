@@ -2,12 +2,16 @@
 CSS for Pyrite Pilot
 */
 
-/* all */
+/* == all ============ */
 body {
     padding-top: 20px;
 }
 
-/* index */
+/* == index ================================================================= */
+#start-pilot {
+    font-weight: 500;
+    font-size: 35px;
+}
 #sign-form #consent {
     max-height: 40%;
     overflow-y: scroll;
@@ -17,12 +21,12 @@ label.disabled, #signed-date {
     color: Grey;
 }
 
-/* index & print */
+/* == index & print ========================================================= */
 #consent ul {
     list-style-type: none;
 }
 
-/* print */
+/* == print ================================================================= */
 #print-form div.panel-heading {
     padding-top: 3px;
     padding-bottom: 3px;
@@ -34,25 +38,67 @@ label.disabled, #signed-date {
 #print-title {
     font-size: 14px;
 }
-
 /* articles */
 #article {
-    border-radius: 4px;
-}
-.loading {
-    height: 75px;
-    width: 75px;
-}
-.screenshot {
     height: auto;
     width: 100%;
     max-width: 700px;
+}
+/* == The following CSS is borrowed from                   ==
+   == http://nicolasgallagher.com/pure-css-speech-bubbles/ == */
+#response {
+    position: absolute;
+    padding: 15px;
+    padding-top: 12px;
+    margin: 1em 0 3em;
+    margin-left: 50px;
+    color: #000;
+    background: #ccc;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 10px 10px 5px #888888;
+}
+#response:after {
+    content: "";
+    position: absolute;
+    top: 16px; /* controls vertical position */
+    bottom: auto;
+    left: -30px; /* controls horizontal position */
+    border-width: 15px 30px 15px 0; /* vary these values to change the angle of the vertex */
+    border-style: solid;
+    border-color: transparent #ccc;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0;
+}
+/* == End of borrowed code == */
+#positive {
+    color: #498a44;
+    padding-right: 10px;
+}
+#positive:hover {
+    color: #346530;
+}
+#negative {
+    color: #c92d39;
+}
+#negative:hover {
+    color: #9b0d28;
+}
+#close-response {
+    color: black;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#close-response:hover {
+    opacity: .5;
 }
 #likert {
     display: table;
     margin: 0 auto;
 }
-#likert table{
+#likert table {
     max-width: 700px;
     background-color: #eee;
     border: 20px solid #eee;
@@ -67,4 +113,48 @@ label.disabled, #signed-date {
 }
 #likert #radios td {
     padding: 8px 0;
+}
+
+/* == responses ============================================================= */
+#responses a:focus, #responses a:hover {
+    text-decoration: none;
+}
+.collapsing {
+    transition: height 0.01s;
+}
+.panel-collapse {
+    padding: 15px;
+    height: auto;
+}
+.positive-response-title {
+    color: #498a44;
+}
+.negative-response-title {
+    color: #c92d39;
+}
+.positive-response-title, .negative-response-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+.form-horizontal div {
+    padding-right: 0;
+    padding-left: 0;
+}
+.response-well {
+    margin-top: 15px;
+    height: auto;
+    padding: 1px;
+}
+.response-well img {
+    max-width: 100%;
+    max-height: 100%;
+}
+textarea {
+    max-height: auto;
+}
+
+/* == end =================================================================== */
+#restart-pilot {
+    font-weight: 500;
+    font-size: 35px;
 }

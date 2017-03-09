@@ -16,9 +16,13 @@
         $responseJSON = json_encode($responseObj);
 
         $responses = fopen("../data/responses.txt", "a");
-        fwrite($responses, $responseJSON);
-        fwrite($responses, "\n");
-        fclose($responses);
-        echo var_dump(json_decode($responseJSON));
+        if ($responses != false) {
+            fwrite($responses, $responseJSON);
+            fwrite($responses, "\n");
+            fclose($responses);
+            echo var_dump(json_decode($responseJSON));
+        } else {
+            echo "ERROR";
+        }
     }
 ?>
