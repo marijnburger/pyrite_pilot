@@ -4,9 +4,9 @@
     window.onload = function () {
         // == elements =========================================================
         var nextButtons = document.querySelectorAll('.panel-collapse button');
-        nextButtons.forEach(function (item) {
-            item.onclick = nextResponse;
-        });
+        // nextButtons.forEach(function (item) {
+        //     item.onclick = nextResponse;
+        // });
 
         var lastButton = document.getElementById('last-next');
         lastButton.onclick = endSurvey;
@@ -17,18 +17,18 @@
 
         // == function definitions =============================================
         function nextResponse() {
-            var collapse = this.parentNode.parentNode;
-            collapse.classList.remove('in');
-            var collapseParent = collapse.parentNode
-            var nextCollapsePanel = collapseParent.nextElementSibling;
-            var nextCollapse = nextCollapsePanel.querySelectorAll('.panel-collapse');
-            nextCollapse[0].classList.add('in');
-
-            var width = Math.round(portionOf100 * counter);
-            progress.setAttribute("aria-valuenow", width);
-            progress.style.width = width + "%";
-            progress.innerHTML = width + "% completed";
-            counter++;
+            // var collapse = this.parentNode.parentNode;
+            // collapse.classList.remove('in');
+            // var collapseParent = collapse.parentNode
+            // var nextCollapsePanel = collapseParent.nextElementSibling;
+            // var nextCollapse = nextCollapsePanel.querySelectorAll('.panel-collapse');
+            // nextCollapse[0].classList.add('in');
+            //
+            // var width = Math.round(portionOf100 * counter);
+            // progress.setAttribute("aria-valuenow", width);
+            // progress.style.width = width + "%";
+            // progress.innerHTML = width + "% completed";
+            // counter++;
         }
 
         function endSurvey() {

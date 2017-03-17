@@ -51,9 +51,11 @@
                 </div>';
             } else { //for pilot/demo purposes
                 echo
-                '<form action="articles.php" method="post" class="text-center">
-                    <button type="submit" id="start-pilot" class="btn btn-default btn-lg" value="Start">Start Demo <i class="fa fa-play" aria-hidden="true"></i></button>
-                </form>';
+                        '<form action="articles.php" method="post" class="text-center">
+                            <button type="submit" id="start-pilot" class="btn btn-default btn-lg" value="Start">Start Demo <i class="fa fa-play" aria-hidden="true"></i></button>
+                        </form>
+                    </div>
+                </div>';
             }
         ?>
     </div>

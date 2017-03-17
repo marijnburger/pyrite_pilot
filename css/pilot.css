@@ -11,6 +11,7 @@ body {
 #start-pilot {
     font-weight: 500;
     font-size: 35px;
+    margin-top: 15%;
 }
 #sign-form #consent {
     max-height: 40%;
@@ -157,4 +158,5 @@ textarea {
 #restart-pilot {
     font-weight: 500;
     font-size: 35px;
+    margin-top: 15%;
 }
