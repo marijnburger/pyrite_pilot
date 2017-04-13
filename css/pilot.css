@@ -121,6 +121,7 @@ label.disabled, #signed-date {
     text-decoration: none;
 }
 .collapsing {
+    -webkit-transition: height 0.01s;
     transition: height 0.01s;
 }
 .panel-collapse {

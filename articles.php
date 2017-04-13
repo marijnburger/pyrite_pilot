@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Review Articles</title>
+    <link rel="icon" type="image/png" href="data/favicon.ico">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
